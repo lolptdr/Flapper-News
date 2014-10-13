@@ -26,8 +26,6 @@ angular.module('flapperNews', ['ui.router'])
   '$scope',
   'posts',
   function($scope, posts){
-    $scope.test = 'Hello world!';
-
     $scope.posts = posts.posts;
 
     $scope.addPost = function(){
@@ -44,6 +42,7 @@ angular.module('flapperNews', ['ui.router'])
       $scope.title = '';
       $scope.link = '';
     }
+    
     $scope.incrementUpvotes = function(post){
       post.upvotes += 1;
     }
